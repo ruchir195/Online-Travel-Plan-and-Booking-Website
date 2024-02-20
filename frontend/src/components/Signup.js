@@ -36,7 +36,8 @@ function Signup() {
             console.log(json)
 
             if (json.tocken) {
-                localStorage.setItem('tocken', json.tocken)
+                localStorage.setItem('name', json.userData.username);
+                localStorage.setItem('tocken', json.tocken);
                 navigate("/login");
 
             } else {

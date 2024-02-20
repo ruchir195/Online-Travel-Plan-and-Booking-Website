@@ -2,16 +2,17 @@ require("dotenv").config();
 const express = require("express");
 const connectDb = require("./db");
 const authRoute = require("./routes/auth-route");
+const placeRoute = require("./routes/place-route");
 var cors = require('cors');
 const passport = require("passport");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../backend/models/User-model'); // Adjust the extension based on your file type
-
+// const Place = require('../backend/models/User-model');
 
 const app = express();
 app.use(cors())
 const PORT = 5000;
-app.use(express.json()); 4
+app.use(express.json()); 
 
 
 passport.use(new GoogleStrategy({
@@ -56,7 +57,11 @@ app.get('/auth/google/home',
         res.redirect("/home");
     });
 
+
+
 app.use("/api/auth", authRoute);
+app.use("/api/place", placeRoute);
+
 
 
 
