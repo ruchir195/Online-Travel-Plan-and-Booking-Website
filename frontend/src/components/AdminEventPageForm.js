@@ -115,9 +115,9 @@ const AdminEventPageForm = () => {
 
                         </div>
 
-                        <div className='px-10 py-10'>
+                        {/* <div className='px-10 py-10'>
                             <img src="../images/Event-Forms.png" alt="" srcset="" className="size-96"/>
-                        </div>
+                        </div> */}
                     </div>
                     <button className="text-white bg-yellow-400 border-0 mx-7 mb-3 py-2 px-6 focus:outline-none hover:bg-yellow-500 rounded text-lg">Submit</button>
                 </form>

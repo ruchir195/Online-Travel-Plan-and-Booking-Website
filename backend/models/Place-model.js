@@ -5,6 +5,10 @@ const placeSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    departureCity:{
+        type: String,
+        require: true
+    },
     placesName:{
         type: String,
         require: true

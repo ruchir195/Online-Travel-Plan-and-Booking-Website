@@ -148,8 +148,8 @@
 }
 
 .heading_icon {
-    margin-top: 8px;
-    font-size: 30px;
+    /* margin-top: 8px; */
+    /* font-size: 20px; */
     color:#de5824;
 }
 
@@ -184,7 +184,7 @@
     margin: 5px;
 }
 .btn_book{
-    margin: 10px auto;
+    /* margin: 10px auto; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,14 +198,14 @@
     border: black; */
     font-weight: bold;
     transition: 0.7s;
-    width: 100px;
+    /* width: 100px; */
 }
 
-.btn_book:hover{
+/* .btn_book:hover{
     background-color: #de5824;
     border: #de5824;
     transition: 0.7s;
-}
+} */
 @media screen and (max-width: 750px) {
 
     .hotel_left {

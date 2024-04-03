@@ -36,6 +36,9 @@ var uploadMultiple = upload.fields([{ name: 'img2' }, { name: 'img3' }, { name: 
 router.route("/event").post( upload.single('image'), placeController.event);
 router.route("/event").get( placeController.eventPage);
 router.route("/placeDetails").post( uploadMultiple, placeController.place);
-router.route("/placeDetails/:placeName").get( placeController.placePage);
+router.route("/placeDetails/:id").get( placeController.placePage);
+router.route("/flight_details").post(placeController.flight_details);
+router.route("/rflight_details").post(placeController.rflight_details);
+router.route("/packages").post(placeController.packages);
 
 module.exports = router;

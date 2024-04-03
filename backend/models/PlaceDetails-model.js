@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+
+
 const placeDetailSchema = new mongoose.Schema({
     placeName:{
         type: String,
@@ -9,27 +11,50 @@ const placeDetailSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+
+    adultCost : {
+        type: String,
+        require: true
+    },
+    childCost: {
+        type: String,
+        require: true
+    },
+    // seniorCost: {
+    //     type: String,
+    //     require: true
+    // },
+    flight:{
+        type: String,
+        required: true
+    },
+    rflight:{
+        type: String,
+        required: true
+    },
+    placesDetails: {
+        type: [{
+        placesInfo: {
+            type: String,
+            required: true,
+          }, 
+        }],
+        required: true, // Ensure the entire placesInfo array is required
+    },
+    dayDetails: {
+        type: [{
+          details: {
+            type: String,
+            required: true,
+          },
+        }],
+        required: true, // Ensure the entire dayDetails array is required
+      },
     duration:{
         type: String,
         required: true
     },
-    price: {
-        type: String,
-        required: true
-    },
-    greeting:{
-        type: String,
-        required: true
-    },
-    age: {
-        type: String,
-        required: true
-    },
     hotelName: {
-        type: String,
-        required: true
-    },
-    hotelRating:{
         type: String,
         required: true
     },
@@ -77,6 +102,9 @@ const placeDetailSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    placeID:{
+        type: String
+    }
 })
 
 const PlaceDetail = new mongoose.model("PlaceDetail", placeDetailSchema);

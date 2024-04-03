@@ -89,12 +89,16 @@ const login = async (req, res) => {
         const { email, password } = req.body;
         const userExists = await User.findOne({ email });
 
+        const admin = false;
+        if(userExists._id === "65e60102114e32bdb7693318"){
+            admin = true;
+        }
+
         if (!userExists) {
             return res.status(400).json({ msg: "Invalid Credentials" })
         }
 
         const user = await bcrypt.compare(password, userExists.password);
-
         if (user) {
             const data = {
                 user: {
@@ -102,8 +106,8 @@ const login = async (req, res) => {
                 }
             }
 
-            const authTocken = jwt.sign(data, process.env.JSON_SECRET_TOKEN, { expiresIn: "1h", });
-            res.status(200).json({ msg: "Login Successfully", tocken: await authTocken, userId: userExists._id.toString()});
+            const authTocken = jwt.sign(data, process.env.JSON_SECRET_TOKEN, { expiresIn: "10000s", });
+            res.status(200).json({ msg: "Login Successfully", tocken: await authTocken, asmin: admin ,username: await userExists.username ,userId: userExists._id.toString()});
         }
         else {
             res.status(401).json({ message: "Invalid email or password" });

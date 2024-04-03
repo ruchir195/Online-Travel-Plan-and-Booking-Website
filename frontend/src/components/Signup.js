@@ -92,7 +92,7 @@ function Signup() {
             <section className=' bg-gray-100' style={{ backgroundColor: "#e7edf4" }}>
                 <div className="px-5 py-10 flex items-center justify-center mx-auto">
                     <div className="lg:w-2/6 md:w-1/2 items-center  justify-center rounded-lg flex flex-col w-full ">
-                        <img alt="ecommerce" className="w-full object-cover object-center rounded hidden sm:block" src="../images/AuthImages/signup1.png" />
+                        <img alt="ecommerce" className="w-full object-cover object-center rounded hidden sm:block" src="../images/AuthImages/sign1.png" />
                     </div>
                     <div className=" lg:w-2/5 md:w-1/2  bg-white rounded-lg flex flex-col w-full mt-10 md:mt-0 z-10 shadow-md  ">
                         <ul className="nav nav-tabs flex border-b" id="myTab" role="tablist">
@@ -190,7 +190,7 @@ function Signup() {
                                         onChange={onChange} />
                                     <p className="text-sm text-red-500">{errors.password?.message}</p>
                                 </div>
-                                <button className="text-white bg-yellow-400 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-500 rounded text-lg">Register</button>
+                                <button className="text-white bg-indigo-400 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-500 rounded text-lg">Register</button>
                             </form>
                             <p className="my-7 flex align-middle items-center justify-between" >
                                 <span className='border-b-2 border-gray-300 w-2/5 '></span>OR

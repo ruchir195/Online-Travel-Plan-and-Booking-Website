@@ -73,7 +73,7 @@ function Otp() {
             <section className='py-20   bg-gray-100 '>
                 <div className="px-5 py-10 flex items-center justify-center">
                     <div className="lg:w-2/6 md:w-1/2 bg-gray-100 items-center mr-5 justify-center rounded-lg flex flex-col w-full mt-10 md:mt-0">
-                        <img alt="ecommerce" className="w-full object-cover pt-10 pb-10 pl-10 object-center rounded" src="../images/AuthImages/otp1.png" />
+                        <img alt="ecommerce" className="w-full object-cover pt-10 pb-10 pl-10 object-center rounded" src="../images/AuthImages/otp.png" />
                     </div>
                     <div className="lg:w-2/6 md:w-1/2 bg-white rounded-lg  py-14 flex flex-col w-full mt-10 md:mt-0  z-10 shadow-md">
                         <div className='py-8 px-14'>
@@ -106,7 +106,7 @@ function Otp() {
                                     <p className="text-sm text-red-500">{errors.otp?.message}</p>
                                 </div>
 
-                                <button className="text-white bg-yellow-400 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-500 rounded text-lg">Confirm OTP</button>
+                                <button className="text-white bg-indigo-400 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-500 rounded text-lg">Confirm OTP</button>
                             </form>
                         </div>
                     </div>
